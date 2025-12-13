@@ -102,7 +102,7 @@ sed -i "/OPENWRT_RELEASE*/d" /usr/lib/os-release
 echo 'OPENWRT_RELEASE="Powered by SWITCH-NET 202509"' >> /usr/lib/os-release
 
 #增加crontab任务
-echo '1 2 * * sun sh /root/script/update-chinaIPList.sh' >> /etc/crontabs/root
+echo '1 2 * * sun sh /root/script/update-chinaIPList.sh && echo " " > /root/script/ovpn-script.log' >> /etc/crontabs/root
 echo '*/5 * * * * sh /root/script/openvpn-watchdog.sh' >> /etc/crontabs/root
 echo '0 5 * * sun reboot &' >> /etc/crontabs/root   #每周日凌晨5点重启
 echo '*/40 * * * * /etc/init.d/xfrpc start' >> /etc/crontabs/root ###每40分钟自动重启xfrpc
