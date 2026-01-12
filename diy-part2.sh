@@ -19,6 +19,9 @@
 #openwrt #CONFIG_PACKAGE_luci-theme-argon=y
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 
+#redsocks2 
+git clone https://github.com/pi2376327/openwrt-redsocks2.git package/redsocks2
+
 #替换编译luci-app-xfrpc软件
 #rm -rf feeds/luci/applications/luci-app-xfrpc
 #git clone https://github.com/liudf0716/luci-app-xfrpc.git  feeds/luci/applications/luci-app-xfrpc
